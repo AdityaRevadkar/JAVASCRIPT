@@ -9,8 +9,8 @@ const obj2 = {
     }
 } 
 
-const fooBindedFunc = obj2.foo.bind(obj1, 1,2,3,4, "bind");
-fooBindedFunc()
+//const fooBindedFunc = obj2.foo.bind(obj1, 1,2,3,4, "bind");
+//fooBindedFunc()
 
 
 Function.prototype.myBind = function(context, ...args) {
