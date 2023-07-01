@@ -1,0 +1,25 @@
+function callback(i){
+    if(i>4){
+    return true;}
+}
+
+
+
+Array.prototype.myfilter=function(callback){
+
+    let arr=this
+
+    let newArr=[]
+
+    for(let i=0;i<arr.length;i++){
+        let item = arr[i]
+        let returnVal=callback(item)
+
+        if(returnVal){
+        newArr.push(item)}
+    }
+return newArr
+}
+
+const result =[2,5,3,9,6,7].myfilter(callback)
+console.log(result);
