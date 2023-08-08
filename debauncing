@@ -1,0 +1,14 @@
+
+function myDebounce( callback, delay ) {
+    let timerNumber;
+    return function() {
+        const event = arguments[0];       
+        
+        clearTimeout(timerNumber)
+
+        timerNumber = setTimeout(() => {
+            callback(event)
+        }, delay)
+    }
+}
+
