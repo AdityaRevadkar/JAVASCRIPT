@@ -1,0 +1,30 @@
+
+ const obj1 = {
+     name: "akash"
+ }
+
+ const obj2 = {
+     name: "Aditya",
+     foo: function(a ,b,c,d, e) {
+         console.log(this.name, a,b,c,d, e);
+     }
+ }
+
+
+
+ Function.prototype.myApply = function () { 
+
+     let context = arguments[0];
+     let args = arguments[1];
+
+
+     const func = this; // foo
+
+     const copyContext = {...context}                                        // {name: "akash"}
+     copyContext.fnName = func                                               // {name: 'akash', fnName: func/foo }
+    
+     copyContext.fnName(...args)
+ }
+
+
+ obj2.foo.myApply(obj1, [10,11,12,13, "myAapply"]) 
