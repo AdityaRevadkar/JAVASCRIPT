@@ -1,0 +1,37 @@
+// const obj1 = {
+//     name: "akash"
+// }
+
+// const obj2 = {
+//     name: "Aditya",
+//     foo: function(a ,b,c,d, e) {
+//         console.log(this.name, a,b,c,d, e);
+//     }
+// }
+
+
+// obj2.foo.call(obj1, 10,11,12,13, "call") // javasciprt
+// obj2.foo.apply(obj1, [10,11,12,13, "apply"]) // javasciprt
+
+
+
+
+// Function.prototype.myCall = function () { // rest operator 
+//     const func = this; // foo
+    
+//     let context = arguments[0];
+//     const args = [...arguments];
+//     console.log(args);
+//     args.shift();
+
+
+
+
+
+//     const copyContext = {...context} // {name: "akash"}
+//     copyContext.fnName = func // {name: 'akash', fnName: func/foo }
+    
+//     copyContext.fnName(...args)
+// }
+
+// obj2.foo.myCall(obj1, 10,11,12,13, "mycall")
